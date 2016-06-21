@@ -53,7 +53,7 @@ training_data, validation_data = train_test_split(data, random_state=11, train_s
 high_level_features = ['m_jj', 'm_jjj', 'm_jlv', 'm_wwbb', 'm_bb', 'm_wbb', 'm_lv']
 
 from sklearn.neighbors import KNeighborsClassifier
-knn = KNeighborsClassifier(n_neighbors=6)
+knn = KNeighborsClassifier(n_neighbors=7)
 knn.fit(training_data[high_level_features],training_data.target)
 
 proba = knn.predict_proba(validation_data[high_level_features])
